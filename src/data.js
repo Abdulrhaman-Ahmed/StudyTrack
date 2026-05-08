@@ -53,10 +53,11 @@ export const SUBJECTS = [
     accent: "#fb7185",
     bg: "rgba(251,113,133,0.1)",
     units: [
-      { name: "Unit 1", lessons: Array.from({ length: 4 }, (_, i) => `Lesson ${i + 1}`) },
-      { name: "Unit 2", lessons: Array.from({ length: 4 }, (_, i) => `Lesson ${i + 1}`) },
+      { name: "Unit 1", lessons: Array.from({ length: 3 }, (_, i) => `Lesson ${i + 1}`) },
+      { name: "Unit 2", lessons: Array.from({ length: 3 }, (_, i) => `Lesson ${i + 1}`) },
       { name: "Unit 3", lessons: Array.from({ length: 2 }, (_, i) => `Lesson ${i + 1}`) },
-      { name: "Unit 4", lessons: Array.from({ length: 3 }, (_, i) => `Lesson ${i + 1}`) },
+      { name: "Unit 4", lessons: Array.from({ length: 2 }, (_, i) => `Lesson ${i + 1}`) },
+      { name: "Unit 5", lessons: Array.from({ length: 3 }, (_, i) => `Lesson ${i + 1}`) },
     ],
   },
   {

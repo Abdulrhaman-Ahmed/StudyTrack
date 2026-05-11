@@ -265,6 +265,34 @@ export default function App() {
             </p>
           </div>
 
+          {/* Countdown to exams */}
+          {(() => {
+            const examDate = new Date('2026-06-06')
+            const today = new Date()
+            today.setHours(0,0,0,0)
+            const diffMs = examDate - today
+            const daysLeft = Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)))
+            return (
+              <div
+                className="flex items-center gap-2 px-3 py-2 rounded-xl flex-shrink-0"
+                style={{ background: daysLeft <= 7 ? 'rgba(239,68,68,0.12)' : daysLeft <= 30 ? 'rgba(251,191,36,0.12)' : 'rgba(52,211,153,0.12)' }}
+              >
+                <span className="text-lg">{daysLeft <= 7 ? '🔴' : daysLeft <= 30 ? '🟡' : '🟢'}</span>
+                <div>
+                  <div className="text-[12px] font-display font-bold leading-none" style={{ color: daysLeft <= 7 ? '#f87171' : daysLeft <= 30 ? '#fbbf24' : '#34d399' }}>
+                    {daysLeft} يوم
+                  </div>
+                  <div
+                    className="text-[9px] mt-0.5"
+                    style={{ color: 'rgba(255,255,255,0.28)' }}
+                  >
+                    للامتحانات 📝
+                  </div>
+                </div>
+              </div>
+            )
+          })()}
+
           {/* Overall pill */}
           <div
             className="flex items-center gap-2.5 px-3 py-2 rounded-xl flex-shrink-0"
